@@ -7,4 +7,3 @@ id=$(docker run --rm -e JAVA_OPTS='-Xms389m -Xmx512m' $IMAGE)
 test $(docker wait $id) -eq 0
 docker commit $id $IMAGE > /dev/null
 echo "-----> Setting JVM Args Complete"
-echo "$TIMEZONE"
